@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101a32" />
+    <title>IT CREW — рекламные задачи</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="logo" href="#top">IT <span>CREW</span><small>DIGITAL</small></a>
+      <nav aria-label="Основная навигация">
+        <a href="#platform">Платформа</a><a href="#tasks">Кампании</a><a href="#agency">Команда</a>
+      </nav>
+      <button class="header-cta" id="openBriefButton" type="button">разместить задачу <b>↗</b></button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div><p class="overline">IT CREW / TELEPLAN</p><h1>Запускаем то,<br /><i>что должно расти.</i></h1><p class="hero-lead">Сайты, продвижение и автоматизация — одной командой, от задачи до измеримого результата.</p><button class="hero-cta" id="heroBriefButton" type="button">разместить задачу <span>↗</span></button></div>
+        <div class="hero-graphic" aria-hidden="true"><div class="planet"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="graphic-label">BRIEF<br />→<br />RESULT</span></div>
+      </section>
+
+      <section class="platform section" id="platform">
+        <div class="section-intro"><p class="overline">ПЛАТФОРМА</p><h2>От задачи<br /><i>до публикации.</i></h2><p>Не каталог исполнителей, а полный рабочий цикл рекламной кампании: нормальный бриф, сравнимые предложения и понятный результат.</p></div>
+        <div class="steps">
+          <article><span>01</span><h3>Опишите результат</h3><p>Цель, аудитория, бюджет, ограничения и срок запуска.</p></article>
+          <article><span>02</span><h3>Сравните условия</h3><p>Цена, охват, формат, дата и комментарий площадки.</p></article>
+          <article><span>03</span><h3>Выберите партнёра</h3><p>Условия фиксируются, остальные предложения закрываются.</p></article>
+          <article><span>04</span><h3>Запустите и проверьте</h3><p>Креатив, публикация, подтверждение и итоговая аналитика.</p></article>
+        </div>
+      </section>
+
+      <section class="tasks section" id="tasks">
+        <div class="section-title"><div><p class="overline">ОТКРЫТЫЕ ЗАДАЧИ</p><h2>Рынок начинается<br /><i>с нормального брифа.</i></h2></div><button class="outline-button" id="secondBriefButton" type="button">+ новая задача</button></div>
+        <p class="section-copy">Здесь бизнес публикует не «нужна реклама», а измеримую задачу. Исполнители отвечают конкретным предложением.</p>
+        <div class="task-grid" id="taskGrid"></div>
+      </section>
+
+      <section class="agency section" id="agency"><div class="agency-copy"><p class="overline">IT CREW</p><h2>Если нужен не<br /><i>исполнитель, а команда.</i></h2><p>Берём проект целиком: упаковываем предложение, делаем сайт, подключаем автоматизацию и отвечаем за запуск продвижения.</p><button class="hero-cta" type="button" id="agencyBriefButton">собрать проект <span>↗</span></button></div><div class="service-list"><div><b>01</b><strong>Стратегия и упаковка</strong></div><div><b>02</b><strong>Сайты и e-commerce</strong></div><div><b>03</b><strong>Telegram и AI-боты</strong></div><div><b>04</b><strong>Реклама и аналитика</strong></div></div></section>
+    </main>
+
+    <footer class="site-footer"><span>© IT CREW DIGITAL</span><span>метод → методология → результат</span><span>лабораторный прототип · 2026</span></footer>
+
+    <dialog class="brief-dialog" id="briefDialog">
+      <form method="dialog" id="briefForm">
+        <button class="close-button" value="cancel" aria-label="Закрыть">×</button>
+        <p class="overline">НОВАЯ ЗАДАЧА / 01</p><h2>Соберите<br /><i>нормальный бриф.</i></h2>
+        <label>Название кампании<input name="title" required value="Запуск нового продукта" /></label>
+        <div class="two-fields"><label>Цель<select name="goal"><option>Трафик</option><option>Продажи</option><option>Узнаваемость</option><option>Регистрации</option></select></label><label>Канал<select name="channel"><option>Telegram</option><option>Инфлюенсеры</option><option>VK / соцсети</option><option>Контекст</option></select></label></div>
+        <div class="two-fields"><label>Бюджет<input name="budget" value="100–180 тыс." /></label><label>Срок запуска<input name="deadline" value="30 дней" /></label></div>
+        <label>Кого хотим привлечь<textarea name="audience" rows="2" required>Люди, которым нужен понятный digital-продукт</textarea></label>
+        <button class="submit-button" value="default">опубликовать задачу <span>↗</span></button>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

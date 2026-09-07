@@ -1,0 +1,7 @@
+{
+  "name": "lab1-it-crew-digital",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/smoke.test.js" }
+}
